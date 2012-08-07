@@ -691,8 +691,7 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['but_lang'] = array(
-    // '#type' => 'select',
-    '#type' => 'hidden',
+    '#type' => 'select',
     '#title' => t('Follow Button language'),
     '#default_value' => $jasm['jasm_twitter']['but_color_butcolor'],
     '#description' => t('The Twitter Follow button has some available languages'),
@@ -1016,6 +1015,7 @@ function jasm_admin_settings() {
     '#type' => 'hidden',
     '#title' => t('Custom subscription block title'),
     '#default_value' => $jasm['jasm_feedburner']['custom_block_title'],
+    // '#default_value' => 'Works',
     '#description' => t('The title the block should have if the default widget is overridden.'),
     '#required' => FALSE,
   );
@@ -1725,9 +1725,9 @@ function jasm_feedburner_mail_subscribe_form($form_state) {
   $form['email'] = array(
     '#type' => 'textfield',
     '#title' => t('Email address'),
-    '#size' => 35,
+    '#size' => 30,
     '#default_value' => $mail,
-    '#description' => t('Content updates will be sent to this address.'),
+    // '#description' => t('Content updates will be sent to this address.'),
   );
 
   $form['loc'] = array(
