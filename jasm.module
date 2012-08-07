@@ -46,6 +46,7 @@ function jasm_admin_settings() {
 
   // GENERAL SETTINGS
   $form['jasm_general'] = array(
+    // '#type' => 'fieldset',
     '#type' => 'hidden',
     '#title' => t('General settings'),
     '#weight' => 0,
@@ -58,7 +59,7 @@ function jasm_admin_settings() {
     '#type' => 'textfield',
     '#title' => t('Social block <strong>width</strong>'),
     // '#default_value' => $jasm['jasm_general']['blockwidth'],
-    '#default_value' => 200,
+    '#default_value' => 220,
     '#size' => 3,
     '#maxlength' => 3,
     '#description' => t("The pixel width of the widget (facebook, twitter, etc.) for display"),
@@ -69,7 +70,7 @@ function jasm_admin_settings() {
     '#type' => 'textfield',
     '#title' => t('Height of a social block'),
     // '#default_value' => $jasm['jasm_general']['blockheight'],
-    '#default_value' => 100,
+    '#default_value' => 200,
     '#size' => 3,
     '#maxlength' => 3,
     '#description' => t("The pixel height of the widget (facebook, twitter, etc.) for display (ideal height, some scripts override this value)"),
@@ -126,7 +127,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_facebook']['fbid'] = array(
-    '#type' => 'textfield',
+    // '#type' => 'textfield',
+    '#type' => 'hidden',
     '#title' => t('The Facebook Page ID'),
     '#default_value' => $jasm['jasm_facebook']['fbid'],
     '#description' => t("The Facebook Page ID."),
@@ -134,7 +136,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_facebook']['colorscheme'] = array(
-    '#type' => 'select',
+    // '#type' => 'select',
+    '#type' => 'hidden',
     '#title' => t('Color scheme'),
     '#default_value' => $jasm['jasm_facebook']['colorscheme'],
     '#description' => t('The preferred color scheme for your widget'),
@@ -154,7 +157,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_facebook']['border_color'] = array(
-    '#type' => 'textfield',
+    // '#type' => 'textfield',
+    '#type' => 'hidden',
     '#title' => t('Border color'),
     '#default_value' => $jasm['jasm_facebook']['border_color'],
     '#description' => t("A hex value for the border color of the Facebook box."),
@@ -162,7 +166,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_facebook']['stream'] = array(
-    '#type' => 'checkbox',
+    // '#type' => 'checkbox',
+    '#type' => 'hidden',
     '#title' => t('Show stream'),
     '#default_value' => $jasm['jasm_facebook']['stream'],
     '#description' => t('Show/Hide Stream of Facebook Page wall.'),
@@ -458,7 +463,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['pref_pollresults'] = array(
-    '#type' => 'checkbox',
+    // '#type' => 'checkbox',
+    '#type' => 'hidden',
     '#title' => t('Poll results'),
     '#default_value' => $jasm['jasm_twitter']['pref_pollresults'],
     '#description' => t('Poll Twitter results in widgets'),
@@ -466,7 +472,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['pref_scrollbar'] = array(
-    '#type' => 'checkbox',
+    // '#type' => 'checkbox',
+    '#type' => 'hidden',
     '#title' => t('Include scroll bar'),
     '#default_value' => $jasm['jasm_twitter']['pref_scrollbar'],
     '#description' => t('Display a scroll bar within widget(s)'),
@@ -474,7 +481,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['pref_timed'] = array(
-    '#type' => 'select',
+    // '#type' => 'select',
+    '#type' => 'hidden',
     '#title' => t('Behaviour'),
     '#default_value' => $jasm['jasm_twitter']['pref_timed'],
     '#description' => t('The preferred method to load and display tweets in a widget(s)'),
@@ -486,7 +494,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['pref_loop'] = array(
-    '#type' => 'checkbox',
+    // '#type' => 'checkbox',
+    '#type' => 'hidden',
     '#title' => t('Loop Tweets'),
     '#default_value' => $jasm['jasm_twitter']['pref_loop'],
     '#description' => t('Whether or not Tweets should loop when displaying <em>Timed Tweets</em>. Has no effect when loading all tweets'),
@@ -561,7 +570,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['pref_avatars'] = array(
-    '#type' => 'checkbox',
+    // '#type' => 'checkbox',
+    '#type' => 'hidden',
     '#title' => t('Display avatars'),
     '#default_value' => $jasm['jasm_twitter']['pref_avatars'],
     '#description' => t('Whether or not to display the author avatar next to tweets.'),
@@ -569,7 +579,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['pref_timestamp'] = array(
-    '#type' => 'checkbox',
+    // '#type' => 'checkbox',
+    '#type' => 'hidden',
     '#title' => t('Display timestamp'),
     '#default_value' => $jasm['jasm_twitter']['pref_timestamp'],
     '#description' => t('Whether or not to display the time published.'),
@@ -577,7 +588,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['pref_hashtags'] = array(
-    '#type' => 'checkbox',
+    // '#type' => 'checkbox',
+    '#type' => 'hidden',
     '#title' => t('Display hashtags'),
     '#default_value' => $jasm['jasm_twitter']['pref_hashtags'],
     '#description' => t('Whether or not to display hashtags within tweets.'),
@@ -585,7 +597,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['color_shellback'] = array(
-    '#type' => 'textfield',
+    // '#type' => 'textfield',
+    '#type' => 'hidden',
     '#title' => t('Shell background color'),
     '#default_value' => $jasm['jasm_twitter']['color_shellback'],
     '#description' => t('The main background color.'),
@@ -593,7 +606,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['color_shelltext'] = array(
-    '#type' => 'textfield',
+    // '#type' => 'textfield',
+    '#type' => 'hidden',
     '#title' => t('Shell text color'),
     '#default_value' => $jasm['jasm_twitter']['color_shelltext'],
     '#description' => t('The text color on the main background color.'),
@@ -601,7 +615,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['color_tweetback'] = array(
-    '#type' => 'textfield',
+    // '#type' => 'textfield',
+    '#type' => 'hidden',
     '#title' => t('Tweet background color'),
     '#default_value' => $jasm['jasm_twitter']['color_tweetback'],
     '#description' => t('The background color inside the shell of the widget(s).'),
@@ -609,7 +624,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['color_tweettext'] = array(
-    '#type' => 'textfield',
+    // '#type' => 'textfield',
+    '#type' => 'hidden',
     '#title' => t('Tweet color'),
     '#default_value' => $jasm['jasm_twitter']['color_tweettext'],
     '#description' => t('The text color of Tweet text.'),
@@ -617,7 +633,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['color_link'] = array(
-    '#type' => 'textfield',
+    // '#type' => 'textfield',
+    '#type' => 'hidden',
     '#title' => t('Link color'),
     '#default_value' => $jasm['jasm_twitter']['color_link'],
     '#description' => t('The text color of Tweet text.'),
@@ -630,7 +647,8 @@ function jasm_admin_settings() {
   //  );
 
   $form['jasm_twitter']['but_show_count'] = array(
-    '#type' => 'checkbox',
+    // '#type' => 'checkbox',
+    '#type' => 'hidden',
     '#title' => t('Display followers count'),
     '#default_value' => $jasm['jasm_twitter']['but_show_count'],
     '#description' => t('Whether or not to display the amount of followers on the Twitter Follow button.'),
@@ -638,7 +656,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['but_color_butcolor'] = array(
-    '#type' => 'select',
+    // '#type' => 'select',
+    '#type' => 'hidden',
     '#title' => t('Follow Button Color'),
     '#default_value' => $jasm['jasm_twitter']['but_color_butcolor'],
     '#description' => t('The Twitter Follow button is available in two preset colors depending on your background color, ie. Blue or Grey'),
@@ -650,7 +669,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['but_color_textcolor'] = array(
-    '#type' => 'textfield',
+    // '#type' => 'textfield',
+    '#type' => 'hidden',
     '#title' => t('Text color'),
     '#default_value' => $jasm['jasm_twitter']['but_color_textcolor'],
     '#description' => t('If you have specified to show the amount of followers above, you can specify the text color\'s hex value to override the default blue or grey presets. Leave blank for default.'),
@@ -660,7 +680,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['but_color_linkcolor'] = array(
-    '#type' => 'textfield',
+    // '#type' => 'textfield',
+    '#type' => 'hidden',
     '#title' => t('Text color'),
     '#default_value' => $jasm['jasm_twitter']['but_color_linkcolor'],
     '#description' => t('You can also override the link color of your username with a hex value. Leave blank for default.'),
@@ -670,7 +691,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['but_lang'] = array(
-    '#type' => 'select',
+    // '#type' => 'select',
+    '#type' => 'hidden',
     '#title' => t('Follow Button language'),
     '#default_value' => $jasm['jasm_twitter']['but_color_butcolor'],
     '#description' => t('The Twitter Follow button has some available languages'),
@@ -688,7 +710,8 @@ function jasm_admin_settings() {
 
   // TODO: Create a JavaScript/iFrame version selector
   $form['jasm_twitter']['but_width'] = array(
-    '#type' => 'textfield',
+    // '#type' => 'textfield',
+    '#type' => 'hidden',
     '#title' => t('Follow button width'),
     '#default_value' => $jasm['jasm_twitter']['but_width'],
     '#size' => 3,
@@ -698,7 +721,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_twitter']['but_text_align'] = array(
-    '#type' => 'select',
+    // '#type' => 'select',
+    '#type' => 'hidden',
     '#title' => t('Follow button alignment'),
     '#default_value' => $jasm['jasm_twitter']['but_text_align'],
     '#description' => t('Align the follow button text left or right.'),
@@ -979,7 +1003,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_feedburner']['override_widget'] = array(
-    '#type' => 'checkbox',
+    // '#type' => 'checkbox',
+    '#type' => 'hidden',
     '#title' => t('Override default widget'),
     '#default_value' => $jasm['jasm_feedburner']['override_widget'],
     '#description' => t('Feedburner provides widget code from the <em>Publicize</em> &raquo; <em>Email Subscriptions</em>. Enable this feature to strip the widget code of styles and branding.'),
@@ -987,7 +1012,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_feedburner']['custom_block_title'] = array(
-    '#type' => 'textfield',
+    // '#type' => 'textfield',
+    '#type' => 'hidden',
     '#title' => t('Custom subscription block title'),
     '#default_value' => $jasm['jasm_feedburner']['custom_block_title'],
     '#description' => t('The title the block should have if the default widget is overridden.'),
@@ -996,6 +1022,7 @@ function jasm_admin_settings() {
 
   // Custom services (aka BYOS "Bring Your Own Service" or DIYS "Do It Yourself Service")
 
+  // GOOGLE+ SETTINGS
   $form['jasm_custom_01'] = array(
     '#type' => 'fieldset',
     '#title' => t('Google+'),
@@ -1021,7 +1048,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_custom_01']['name'] = array(
-    '#type' => 'textfield',
+    // '#type' => 'textfield',
+    '#type' => 'hidden',
     '#title' => t('Service name'),
     '#default_value' => $jasm['jasm_custom_01']['name'],
     '#description' => t('The name of the 3rd party or service. This is used to generate css class name(s) and the titles of the links in the <em>JASM Service List</em>.'),
@@ -1038,13 +1066,13 @@ function jasm_admin_settings() {
 
   $form['jasm_custom_01']['href'] = array(
     '#type' => 'textfield',
-    '#title' => t('Custom service url'),
+    '#title' => t('Google+ url'),
     '#default_value' => $jasm['jasm_custom_01']['href'],
     '#description' => t('The full url of the custom service. Do not include "http://"'),
     '#required' => FALSE,
   );
 
-
+  // LINKEDIN SETTINGS
   $form['jasm_custom_02'] = array(
     '#type' => 'fieldset',
     '#title' => t('Linkedin'),
@@ -1070,7 +1098,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_custom_02']['name'] = array(
-    '#type' => 'textfield',
+    // '#type' => 'textfield',
+    '#type' => 'hidden',
     '#title' => t('Service name'),
     '#default_value' => $jasm['jasm_custom_02']['name'],
     '#description' => t('The name of the 3rd party or service. This is used to generate css class name(s) and the titles of the links in the <em>JASM Service List</em>.'),
@@ -1087,7 +1116,7 @@ function jasm_admin_settings() {
 
   $form['jasm_custom_02']['href'] = array(
     '#type' => 'textfield',
-    '#title' => t('Custom service url'),
+    '#title' => t('Linkedin url'),
     '#default_value' => $jasm['jasm_custom_02']['href'],
     '#description' => t('The full url of the custom service. Do not include "http://"'),
     '#required' => FALSE,
@@ -1247,13 +1276,13 @@ function jasm_block_view($delta = '') {
 
     // Facebook Related Blocks
     case 'fb_like_box':
-      $block['subject'] = NULL;
+      $block['subject'] = t('Like us on Facebook!');
       $block['content'] = jasm_facebook_likebox();
       break;
 
     // Twitter Related Blocks
     case 'twitter_profile_widget':
-      $block['subject'] = NULL;
+      $block['subject'] = t('Twitter');
       $block['content'] = jasm_twitter_widget_profile();
       break;
 
@@ -1316,7 +1345,7 @@ function jasm_service_list() {
   foreach ($jasm as $service) {
     if (isset($service['inlist'])) {
       if ($service['inlist']) {
-        $servicelist[$i] = l($service['name'], ('http://' . $service['basepath'] . '/' . $service['href']), array('attributes' => array('class' => strtolower($service['name']), ), ));
+        $servicelist[$i] = l($service['name'], ('http://' . $service['basepath'] . '/' . $service['href']), array('attributes' => array('class' => strtolower($service['name']), 'target' => 'popupwindow'), ));
         $i++;
       } //endif
     } //endif
