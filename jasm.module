@@ -950,7 +950,7 @@ function jasm_admin_settings() {
     '#type' => 'weight',
     '#title' => t('Weight'),
     '#default_value' => $jasm['jasm_feedburner']['weight'],
-    '#delta' => 10,
+    '#delta' => 20,
     '#description' => t('Optional. Re-order the items in the JASM list by adjusting the weight.'),
   );
 
@@ -1016,7 +1016,7 @@ function jasm_admin_settings() {
     '#type' => 'weight',
     '#title' => t('Weight'),
     '#default_value' => $jasm['jasm_custom_01']['weight'],
-    '#delta' => 10,
+    '#delta' => 20,
     '#description' => t('Optional. Re-order the items in the JASM list by adjusting the weight.'),
   );
 
@@ -1065,7 +1065,7 @@ function jasm_admin_settings() {
     '#type' => 'weight',
     '#title' => t('Weight'),
     '#default_value' => $jasm['jasm_custom_02']['weight'],
-    '#delta' => 10,
+    '#delta' => 20,
     '#description' => t('Optional. Re-order the items in the JASM list by adjusting the weight.'),
   );
 
@@ -1310,8 +1310,8 @@ function jasm_service_list() {
   $attributes = array('class' => 'jasm-service-list');
   $i = 0;
   //Sort the applicable elements by weight
-  // array_shift($jasm);
-  uasort($jasm, "element_sort");
+  array_shift($jasm);
+  uasort($jasm, "drupal_sort_weight");
 
   foreach ($jasm as $service) {
     if (isset($service['inlist'])) {
