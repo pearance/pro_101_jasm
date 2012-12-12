@@ -46,8 +46,8 @@ function jasm_admin_settings() {
 
   // GENERAL SETTINGS
   $form['jasm_general'] = array(
-    // '#type' => 'fieldset',
-    '#type' => 'hidden',
+    '#type' => 'fieldset',
+    // '#type' => 'hidden',
     '#title' => t('General settings'),
     '#weight' => 0,
     '#collapsible' => TRUE,
@@ -58,8 +58,8 @@ function jasm_admin_settings() {
   $form['jasm_general']['blockwidth'] = array(
     '#type' => 'textfield',
     '#title' => t('Social block <strong>width</strong>'),
-    // '#default_value' => $jasm['jasm_general']['blockwidth'],
-    '#default_value' => 220,
+    '#default_value' => $jasm['jasm_general']['blockwidth'],
+    // '#default_value' => 220,
     '#size' => 3,
     '#maxlength' => 3,
     '#description' => t("The pixel width of the widget (facebook, twitter, etc.) for display"),
@@ -69,8 +69,8 @@ function jasm_admin_settings() {
   $form['jasm_general']['blockheight'] = array(
     '#type' => 'textfield',
     '#title' => t('Height of a social block'),
-    // '#default_value' => $jasm['jasm_general']['blockheight'],
-    '#default_value' => 200,
+    '#default_value' => $jasm['jasm_general']['blockheight'],
+    // '#default_value' => 220,
     '#size' => 3,
     '#maxlength' => 3,
     '#description' => t("The pixel height of the widget (facebook, twitter, etc.) for display (ideal height, some scripts override this value)"),
