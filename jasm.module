@@ -1244,9 +1244,9 @@ function jasm_block_info() {
   // TODO: JASM Twitter List widget $block[5]
 
   // Foursquare Related Blocks
-  $blocks['4sq_pw_venue'] = array(
-    'info' => t('JASM Foursquare venue widget (from placewidget.com)'),
-  );
+  // $blocks['4sq_pw_venue'] = array(
+  //   'info' => t('JASM Foursquare venue widget (from placewidget.com)'),
+  // );
 
   // Feedburner Related Blocks
   $blocks['feedburner_mail_subscribe'] = array(
