@@ -1025,7 +1025,7 @@ function jasm_admin_settings() {
   // GOOGLE+ SETTINGS
   $form['jasm_custom_01'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Google+'),
+    '#title' => t('Googleplus'),
     '#weight' => 1,
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
