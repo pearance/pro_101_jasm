@@ -55,6 +55,16 @@ function jasm_admin_settings() {
     '#weight' => -50,
   );
 
+	$form['jasm_general']['custom_block_title2'] = array(
+    '#type' => 'textfield',
+    // '#type' => 'hidden',
+    '#title' => t('Custom social block title'),
+    '#default_value' => $jasm['jasm_general']['custom_block_title2'],
+    // '#default_value' => 'Works',
+    '#description' => t('The title the block should have.'),
+    '#required' => FALSE,
+  );
+
   $form['jasm_general']['blockwidth'] = array(
     '#type' => 'textfield',
     '#title' => t('Social block <strong>width</strong>'),
@@ -1011,8 +1021,8 @@ function jasm_admin_settings() {
   );
 
   $form['jasm_feedburner']['custom_block_title'] = array(
-    // '#type' => 'textfield',
-    '#type' => 'hidden',
+    '#type' => 'textfield',
+    // '#type' => 'hidden',
     '#title' => t('Custom subscription block title'),
     '#default_value' => $jasm['jasm_feedburner']['custom_block_title'],
     // '#default_value' => 'Works',
@@ -1066,7 +1076,7 @@ function jasm_admin_settings() {
 
   $form['jasm_custom_01']['href'] = array(
     '#type' => 'textfield',
-    '#title' => t('Google+ url'),
+    '#title' => t('Google url'),
     '#default_value' => $jasm['jasm_custom_01']['href'],
     '#description' => t('The full url of the custom service. Do not include "http://"'),
     '#required' => FALSE,
@@ -1270,13 +1280,15 @@ function jasm_block_view($delta = '') {
   $block = array();
   switch ($delta) {
     case 'service_list':
-      $block['subject'] = t('Social Media');
+    	$settings = jasm_get_values_general();
+      // $block['subject'] = t('Stay in Touch!');
+      $block['subject'] = $settings['custom_block_title2'];
       $block['content'] = jasm_service_list();
       break;
 
     // Facebook Related Blocks
     case 'fb_like_box':
-      $block['subject'] = t('Like us on Facebook!');
+      $block['subject'] = NULL;
       $block['content'] = jasm_facebook_likebox();
       break;
 
@@ -1834,6 +1846,7 @@ function jasm_get_values_general() {
   $defaults = array(
     'blockwidth' => 270,
     'blockheight' => 500,
+    'custom_block_title2' => t('Default line 1942'),
   );
   $defaults_general = variable_get('jasm_general', $defaults);
   return $defaults_general;
